@@ -3,20 +3,27 @@
 <head>
 <meta charset="utf-8">
 <title>part_1</title>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js"></script>
 <style>
-    #before:before {
+    h2 {
+        cursor: pointer;
+    }
+    h2:hover {
+        color: #666;
+    }
+    #before.add:before {
         content: "Before+";
         color: red;
     }
-    #after:after {
+    #after.add:after {
         content: "+After";
         color: red;
     }
-    #both:before {
+    #both.add:before {
         content: "Before+";
         color: red;
     }
-    #both:after {
+    #both.add:after {
         content: "+After";
         color: red;
     }
@@ -73,4 +80,9 @@
     <br>
     <a href="http://tedshd.github.io/header_responsive_navigation/">header_responsive_navigation</a>
 </body>
+<script>
+    $('h2').on('click', function () {
+        $(this).next().toggleClass('add');
+    })
+</script>
 </html>

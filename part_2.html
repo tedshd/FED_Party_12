@@ -7,11 +7,13 @@
 <style>
     body {
         word-wrap: break-word;
+        margin: 50px;
     }
     .transform {
         width: 120px;
         height: 120px;
-        background: pink;
+        background: rgba(128, 255, 128, .7);
+        color: #222;
         transition-property: all;
         transition-duration: .5s;
         transition-timing-function: ease;
@@ -52,25 +54,25 @@
     <h1>Transition</h1>
     <a href="slider_menu.html">Demo slider menu</a>
     <h1>Transform</h1>
-    <h2>matrix(n,n,n,n,n,n)</h2>
-    <div class="transform tf_1">Div Content</div>
-    <h2>translate(x,y)</h2>
+    <h2>matrix(n,n,n,n,n,n) - matrix(0, 1, 1, 0, 0, 0)</h2>
+    <div class="transform tf_1">matrix(0, 1, 1, 0, 0, 0)</div>
+    <h2>translate(x,y) - translate(100px, -20px)</h2>
     <div class="transform tf_2">translate(100px, -20px)</div>
-    <h2>scale(x,y)</h2>
+    <h2>scale(x,y) - scale(1.5, .5)</h2>
     <div class="transform tf_3">scale(1.5, .5)</div>
-    <h2>rotate(angle)</h2>
+    <h2>rotate(angle) - rotate(30deg)</h2>
     <div class="transform tf_4">rotate(30deg)</div>
-    <h2>rotateX(angle)</h2>
+    <h2>rotateX(angle) - rotateX(30deg)</h2>
     <div class="transform tf_5">rotateX(30deg)</div>
-    <h2>rotateY(angle)</h2>
+    <h2>rotateY(angle) - rotateY(60deg)</h2>
     <div class="transform tf_6">rotateY(60deg)</div>
-    <h2>rotateZ(angle)</h2>
+    <h2>rotateZ(angle) - rotateZ(60deg)</h2>
     <div class="transform tf_7">rotateZ(60deg)</div>
-    <h2>skew(x-angle,y-angle)</h2>
+    <h2>skew(x-angle,y-angle) - skew(30deg, 30deg)</h2>
     <div class="transform tf_8">skew(30deg, 30deg)</div>
-    <h2>skewX(angle)</h2>
+    <h2>skewX(angle) - skewX(30deg)</h2>
     <div class="transform tf_9">skewX(30deg)</div>
-    <h2>skewY(angle)</h2>
+    <h2>skewY(angle) - skewY(30deg)</h2>
     <div class="transform tf_10">skewY(30deg)</div>
     <br>
     <a href="http://tedshd.github.io/material_design_for_web/">material_design_for_web</a>
