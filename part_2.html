@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Part_2</title>
+</head>
+<style>
+    body {
+        word-wrap: break-word;
+    }
+    .transform {
+        width: 120px;
+        height: 120px;
+        background: pink;
+        transition-property: all;
+        transition-duration: .5s;
+        transition-timing-function: ease;
+    }
+    .tf_1:hover {
+        transform: matrix(0, 1, 1, 0, 0, 0);
+    }
+    .tf_2:hover {
+        transform: translate(100px, -20px);
+    }
+    .tf_3:hover {
+        transform: scale(1.5, .5);
+    }
+    .tf_4:hover {
+        transform: rotate(30deg);
+    }
+    .tf_5:hover {
+        transform: rotateX(30deg);
+    }
+    .tf_6:hover {
+        transform: rotateY(60deg);
+    }
+    .tf_7:hover {
+        transform: rotateZ(60deg);
+    }
+    .tf_8:hover {
+        transform: skew(30deg, 30deg);
+    }
+    .tf_9:hover {
+        transform: skewX(30deg);
+    }
+    .tf_10:hover {
+        transform: skewY(30deg);
+    }
+
+</style>
+<body>
+    <h1>Transition</h1>
+    <a href="slider_menu.html">Demo slider menu</a>
+    <h1>Transform</h1>
+    <h2>matrix(n,n,n,n,n,n)</h2>
+    <div class="transform tf_1">Div Content</div>
+    <h2>translate(x,y)</h2>
+    <div class="transform tf_2">translate(100px, -20px)</div>
+    <h2>scale(x,y)</h2>
+    <div class="transform tf_3">scale(1.5, .5)</div>
+    <h2>rotate(angle)</h2>
+    <div class="transform tf_4">rotate(30deg)</div>
+    <h2>rotateX(angle)</h2>
+    <div class="transform tf_5">rotateX(30deg)</div>
+    <h2>rotateY(angle)</h2>
+    <div class="transform tf_6">rotateY(60deg)</div>
+    <h2>rotateZ(angle)</h2>
+    <div class="transform tf_7">rotateZ(60deg)</div>
+    <h2>skew(x-angle,y-angle)</h2>
+    <div class="transform tf_8">skew(30deg, 30deg)</div>
+    <h2>skewX(angle)</h2>
+    <div class="transform tf_9">skewX(30deg)</div>
+    <h2>skewY(angle)</h2>
+    <div class="transform tf_10">skewY(30deg)</div>
+    <br>
+    <a href="http://tedshd.github.io/material_design_for_web/">material_design_for_web</a>
+</body>
+</html>

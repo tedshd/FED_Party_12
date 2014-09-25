@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>slider_menu</title>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js"></script>
+<style>
+    #slider-module, svg {
+        transition-property: all;
+        transition-duration: 3s;
+        transition-timing-function: ease;
+    }
+    #slider-module {
+        position: absolute;
+        top: 0;
+        left: -275px;
+        width: 300px;
+        height: 100%;
+        background: rgba(128, 128, 255, .5);
+    }
+    #slider-module-control {
+        position: absolute;
+        top: 0;
+        right: 0;
+        cursor: pointer;
+    }
+    #slider-module.slider-module-show {
+        left: 0;
+    }
+    .slider-module-open svg {
+        transform: rotateY(180deg);
+    }
+</style>
+</head>
+<body>
+    <div id="slider-module" class="">
+        <div id="slider-module-control">
+            <svg width="25" height="25" xmlns="http://www.w3.org/2000/svg" xmlns:svg="http://www.w3.org/2000/svg">
+                <g>
+                    <line stroke="#ffffff" id="svg_3" y2="22.48455" x2="7.071" y1="11.50894" x1="18.09539" stroke-linecap="null" stroke-linejoin="null" stroke-dasharray="null" stroke-width="3" fill="none"/>
+                    <line stroke="#ffffff" id="svg_4" y2="2.58211" x2="7.02222" y1="13.55772" x1="18.09539" stroke-linecap="null" stroke-linejoin="null" stroke-dasharray="null" stroke-width="3" fill="none"/>
+                </g>
+            </svg>
+        </div>
+        CONTENT
+        <div>
+            <br>
+            transition-property: all;
+            <br>
+            transition-duration: 5s;
+            <br>
+            transition-timing-function: ease;
+            <br>
+        </div>
+    </div>
+</body>
+<script>
+$('#slider-module').on('click', '#slider-module-control', function () {
+    $('#slider-module-control').toggleClass('slider-module-open');
+    $('#slider-module').addClass('slider-module-show');
+});
+$('#slider-module').on('click', '.slider-module-open', function () {
+    $('#slider-module').removeClass('slider-module-show');
+});
+</script>
+</html>

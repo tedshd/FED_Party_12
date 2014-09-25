@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>part_1</title>
+<style>
+    #before:before {
+        content: "Before+";
+        color: red;
+    }
+    #after:after {
+        content: "+After";
+        color: red;
+    }
+    #both:before {
+        content: "Before+";
+        color: red;
+    }
+    #both:after {
+        content: "+After";
+        color: red;
+    }
+    #bubble {
+        position: relative;
+        width: 200px;
+        height: 80px;
+        background: rgba(128, 255, 128, .8);
+        border-radius: 5px;
+    }
+    #bubble::before {
+        content: "";
+        position: absolute;
+        bottom: 10px;
+        right: -15px;
+        border-top: solid transparent 15px;
+        border-right: 0;
+        border-bottom: solid transparent 15px;
+        border-left: solid rgba(128, 255, 128, .8) 15px;
+    }
+    input[type="radio"] {
+        display: block;
+    }
+    input[type="radio"]:checked {
+        margin-left: 30px;
+    }
+    input[type="checkbox"]:checked + span {
+        background: #666;
+        color: #fff;
+    }
+</style>
+</head>
+<body>
+    <h1>Pseudo-elements</h1>
+    <h2>::before</h2>
+    <span id="before">example_1</span>
+    <h2>::after</h2>
+    <span id="after">example_2</span>
+    <h2>::before + ::after</h2>
+    <span id="both">example_3</span>
+    <br>
+    <br>
+    <div id="bubble">Hello</div>
+    <h1>Pseudo-classes</h1>
+    <label for="radio">Radio</label>
+    <input id="radio" name="example" type="radio" value="0">radio_1
+    <input id="radio" name="example" type="radio" value="1" checked>radio_2
+    <hr>
+    <label for="checkbox">Checkbox</label>
+    <input id="checkbox" type="checkbox">
+    <span>Description</span>
+    <hr>
+    <a href="http://codepen.io/tedshd/pen/ExlvI">CodePen</a>
+    <br>
+    <a href="http://tedshd.github.io/header_responsive_navigation/">header_responsive_navigation</a>
+</body>
+</html>

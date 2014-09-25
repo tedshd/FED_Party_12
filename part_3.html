@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Part_3</title>
+<style>
+    #arrow {
+        display: inline-block;
+        cursor: pointer;
+    }
+    #arrow svg {
+        transition-property: all;
+        transition-duration: .5s;
+        transition-timing-function: ease;
+    }
+    #arrow:hover svg {
+        transform: rotateY(180deg);
+    }
+    #arrow:hover line {
+        stroke: red;
+    }
+    time {
+        box-sizing: border-box;
+        height: 72px;
+        color: #69CA62;
+        width: 72px;
+        float: left;
+        overflow: hidden;
+        text-align: center;
+        padding-top: 12.3076923077px;
+        position: relative;
+        font-size: 18px;
+    }
+    .news-svg {
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+    .news-svg line {
+        stroke-width: 2;
+        stroke: #69CA62;
+        fill: none;
+        stroke-dasharray: 72;
+    }
+    .news-svg-top {
+        -webkit-animation: top 3s linear infinite;
+        -moz-animation: top 3s linear infinite;
+        -o-animation: top 3s linear infinite;
+        animation: top 3s linear infinite;
+    }
+    .news-svg-left {
+        -webkit-animation: left 3s linear infinite;
+        -moz-animation: left 3s linear infinite;
+        -o-animation: left 3s linear infinite;
+        animation: left 3s linear infinite;
+    }
+    .news-svg-bottom {
+        -webkit-animation: bottom 3s linear infinite;
+        -moz-animation: bottom 3s linear infinite;
+        -o-animation: bottom 3s linear infinite;
+        animation: bottom 3s linear infinite;
+    }
+    .news-svg-right {
+        -webkit-animation: right 3s linear infinite;
+        -moz-animation: right 3s linear infinite;
+        -o-animation: right 3s linear infinite;
+        animation: right 3s linear infinite;
+    }
+    @-webkit-keyframes top {
+        from {
+            -moz-transform: translateX(0px);
+            -ms-transform: translateX(0px);
+            -webkit-transform: translateX(0px);
+            transform: translateX(0px);
+        }
+        to {
+            -moz-transform: translateX(-144px);
+            -ms-transform: translateX(-144px);
+            -webkit-transform: translateX(-144px);
+            transform: translateX(-144px);
+        }
+    }
+    @keyframes top {
+        from {
+            -moz-transform: translateX(0px);
+            -ms-transform: translateX(0px);
+            -webkit-transform: translateX(0px);
+            transform: translateX(0px);
+        }
+        to {
+            -moz-transform: translateX(-144px);
+            -ms-transform: translateX(-144px);
+            -webkit-transform: translateX(-144px);
+            transform: translateX(-144px);
+        }
+    }
+    @-webkit-keyframes left {
+        from {
+            -moz-transform: translateY(72px);
+            -ms-transform: translateY(72px);
+            -webkit-transform: translateY(72px);
+            transform: translateY(72px);
+        }
+        to {
+            -moz-transform: translateY(216px);
+            -ms-transform: translateY(216px);
+            -webkit-transform: translateY(216px);
+            transform: translateY(216px);
+        }
+    }
+    @keyframes left {
+        from {
+            -moz-transform: translateY(72px);
+            -ms-transform: translateY(72px);
+            -webkit-transform: translateY(72px);
+            transform: translateY(72px);
+        }
+        to {
+            -moz-transform: translateY(216px);
+            -ms-transform: translateY(216px);
+            -webkit-transform: translateY(216px);
+            transform: translateY(216px);
+        }
+    }
+    @-webkit-keyframes bottom {
+        from {
+            -moz-transform: translateX(0px);
+            -ms-transform: translateX(0px);
+            -webkit-transform: translateX(0px);
+            transform: translateX(0px);
+        }
+        to {
+            -moz-transform: translateX(144px);
+            -ms-transform: translateX(144px);
+            -webkit-transform: translateX(144px);
+            transform: translateX(144px);
+        }
+    }
+    @keyframes bottom {
+        from {
+            -moz-transform: translateX(0px);
+            -ms-transform: translateX(0px);
+            -webkit-transform: translateX(0px);
+            transform: translateX(0px);
+        }
+        to {
+            -moz-transform: translateX(144px);
+            -ms-transform: translateX(144px);
+            -webkit-transform: translateX(144px);
+            transform: translateX(144px);
+        }
+    }
+    @-webkit-keyframes right {
+        from {
+            -moz-transform: translateY(72px);
+            -ms-transform: translateY(72px);
+            -webkit-transform: translateY(72px);
+            transform: translateY(72px);
+        }
+        to {
+            -moz-transform: translateY(-72px);
+            -ms-transform: translateY(-72px);
+            -webkit-transform: translateY(-72px);
+            transform: translateY(-72px);
+        }
+    }
+    @keyframes right {
+        from {
+            -moz-transform: translateY(72px);
+            -ms-transform: translateY(72px);
+            -webkit-transform: translateY(72px);
+            transform: translateY(72px);
+        }
+        to {
+            -moz-transform: translateY(-72px);
+            -ms-transform: translateY(-72px);
+            -webkit-transform: translateY(-72px);
+            transform: translateY(-72px);
+        }
+    }
+</style>
+</head>
+<body>
+    <h1>SVG + Transform + Transform</h1>
+    <time>
+        <em>2014</em><br>9/20
+        <svg class="news-svg" width="72" height="72">
+            <line class="news-svg-top" x1="0" y1="0" x2="216" y2="0"></line>
+            <line class="news-svg-left" x1="0" y1="72" x2="0" y2="-144"></line>
+            <line class="news-svg-bottom" x1="72" y1="72" x2="-144" y2="72"></line>
+            <line class="news-svg-right" x1="72" y1="0" x2="72" y2="216"></line>
+        </svg>
+    </time>
+    <br><br>
+    <br><br>
+    <br>
+    <a href="http://mopcon.org/2014/news.php">MOPCON 2014</a>
+    <br>
+    <br>
+    <span id="arrow">
+        <svg width="25" height="25" xmlns="http://www.w3.org/2000/svg" xmlns:svg="http://www.w3.org/2000/svg">
+            <g>
+                <line stroke="#666" id="svg_3" y2="22.48455" x2="7.071" y1="11.50894" x1="18.09539" stroke-linecap="null" stroke-linejoin="null" stroke-dasharray="null" stroke-width="3" fill="none"/>
+                <line stroke="#666" id="svg_4" y2="2.58211" x2="7.02222" y1="13.55772" x1="18.09539" stroke-linecap="null" stroke-linejoin="null" stroke-dasharray="null" stroke-width="3" fill="none"/>
+            </g>
+        </svg>
+    </span>
+    <br>
+</body>
+</html>
