@@ -5,6 +5,9 @@
 <title>slider_menu</title>
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js"></script>
 <style>
+    .bg {
+        background: rgba(0, 0, 0, .5);
+    }
     #slider-module, svg {
         transition-property: all;
         transition-duration: 3s;
@@ -16,7 +19,7 @@
         left: -275px;
         width: 300px;
         height: 100%;
-        background: rgba(128, 128, 255, .5);
+        background: rgba(128, 128, 255, 1);
     }
     #slider-module-control {
         position: absolute;
@@ -62,5 +65,13 @@ $('#slider-module').on('click', '#slider-module-control', function () {
 $('#slider-module').on('click', '.slider-module-open', function () {
     $('#slider-module').removeClass('slider-module-show');
 });
+document.querySelector('#slider-module').addEventListener('transitionend', function (e) {
+    console.log(e);
+    if (document.querySelector('#slider-module').classList.contains('slider-module-show')) {
+        document.querySelector('body').classList.add('bg');
+    } else {
+        document.querySelector('body').classList.remove('bg');
+    }
+}, false);
 </script>
 </html>
